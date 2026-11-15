@@ -12,6 +12,8 @@ const Platforms = lazy(() => import('@/pages/Platforms').then((module) => ({ def
 const About = lazy(() => import('@/pages/About').then((module) => ({ default: module.About })))
 const GamePage = lazy(() => import('@/pages/GamePage').then((module) => ({ default: module.GamePage })))
 const NotFound = lazy(() => import('@/pages/NotFound').then((module) => ({ default: module.NotFound })))
+const Admin = lazy(() => import('@/pages/Admin'))
+const adminEnabled = import.meta.env.VITE_ENABLE_ADMIN === 'true'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -61,35 +63,54 @@ function RouteFallback() {
   )
 }
 
+function Application() {
+  const { pathname } = useLocation()
+  const isAdmin = adminEnabled && pathname === '/admin'
+
+  if (isAdmin) {
+    return (
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </Suspense>
+    )
+  }
+
+  return (
+    <div className="grain relative min-h-screen overflow-x-clip">
+      <div className="ambient-glow" aria-hidden="true" />
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[110] -translate-y-24 rounded-full bg-[#f4f1ea] px-4 py-2 text-xs font-medium text-[#0a0a0f] transition focus:translate-y-0"
+      >
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main-content">
+        <Suspense fallback={<RouteFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/aaa" element={<AaaGames />} />
+            <Route path="/genres" element={<Genres />} />
+            <Route path="/platforms" element={<Platforms />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/games/:slug" element={<GamePage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
-      <div className="grain relative min-h-screen overflow-x-clip">
-        <div className="ambient-glow" aria-hidden="true" />
-        <a
-          href="#main-content"
-          className="fixed left-4 top-4 z-[110] -translate-y-24 rounded-full bg-[#f4f1ea] px-4 py-2 text-xs font-medium text-[#0a0a0f] transition focus:translate-y-0"
-        >
-          Skip to content
-        </a>
-        <ScrollToTop />
-        <Navbar />
-        <main id="main-content">
-          <Suspense fallback={<RouteFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/discover" element={<Discover />} />
-              <Route path="/aaa" element={<AaaGames />} />
-              <Route path="/genres" element={<Genres />} />
-              <Route path="/platforms" element={<Platforms />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/games/:slug" element={<GamePage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
+      <ScrollToTop />
+      <Application />
     </BrowserRouter>
   )
 }

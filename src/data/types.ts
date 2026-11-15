@@ -34,6 +34,15 @@ export interface Feature {
   body: string
 }
 
+export interface GameContent {
+  version: number
+  updatedAt: string
+  updatedBy?: string
+  overrides: Record<string, Game>
+  custom: Game[]
+  deleted: string[]
+}
+
 export interface Game {
   slug: string
   title: string

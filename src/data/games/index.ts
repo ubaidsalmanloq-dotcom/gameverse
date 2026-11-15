@@ -1,14 +1,28 @@
-import type { Game } from '../types'
+import type { Game, GameContent } from '../types'
+import content from '../../../content/admin-content.json'
 import { aaaGames } from './aaa'
+import { mergeGameCatalog, normalizeContent } from './merge'
 import { moreGames } from './more'
 
-export const games: Game[] = [...aaaGames, ...moreGames]
+export const builtInGames: Game[] = [...aaaGames, ...moreGames]
+
+export const adminContent: GameContent = normalizeContent(content)
+
+export const games: Game[] = mergeGameCatalog(builtInGames, adminContent)
 
 export const gameBySlug = Object.fromEntries(games.map((game) => [game.slug, game]))
 
 export const aaaCollection = games.filter((game) => game.aaa)
 
-export const featuredGames = ['red-dead-redemption-2', 'cyberpunk-2077', 'elden-ring']
+const preferredFeatured = ['red-dead-redemption-2', 'cyberpunk-2077', 'elden-ring']
+
+export const featuredGames = [
+  ...preferredFeatured.filter((slug) => gameBySlug[slug]),
+  ...games
+    .filter((game) => !preferredFeatured.includes(game.slug))
+    .sort((a, b) => b.popularity - a.popularity)
+    .map((game) => game.slug),
+].slice(0, 3)
 
 export function getGame(slug: string | undefined): Game | undefined {
   return slug ? gameBySlug[slug] : undefined
