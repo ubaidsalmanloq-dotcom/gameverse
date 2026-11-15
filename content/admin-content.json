@@ -1,7 +1,121 @@
 {
   "version": 1,
-  "updatedAt": "",
-  "overrides": {},
+  "updatedAt": "2026-11-15T09:21:22.796Z",
+  "updatedBy": "admin",
+  "overrides": {
+    "red-dead-redemption-2": {
+      "slug": "red-dead-redemption-2",
+      "title": "Red Dead Redemption 2",
+      "year": 2018,
+      "releaseDate": "October 26, 2018",
+      "developer": "Rockstar Studios",
+      "publisher": "Rockstar Games",
+      "genres": [
+        "action",
+        "adventure",
+        "open-world",
+        "multiplayer"
+      ],
+      "primaryGenre": "open-world",
+      "platforms": [
+        "PC",
+        "PS4",
+        "PS5",
+        "Xbox One",
+        "Xbox Series X|S"
+      ],
+      "platformNote": "PS5 and Xbox Series X|S play the PS4/Xbox One version through backward compatibility.",
+      "modes": [
+        "Single-player",
+        "Red Dead Online"
+      ],
+      "score": 9.9,
+      "tagline": "The frontier, rendered in blood and starlight.",
+      "shortDescription": "Rockstar’s sprawling western follows an outlaw gang as the age of the gunslinger gives way to law, industry, and loss.",
+      "overview": "An open-world western built on staggering period detail, Red Dead Redemption 2 trades power fantasy for the slow, muddy reality of life in a vanishing America. Its world rewards attention: conversations, weather, wildlife, and consequence all matter.",
+      "story": "America, 1899. The Van der Linde gang is on the run after a robbery goes wrong, pursued by federal agents and bounty hunters. Arthur Morgan, a senior enforcer, must keep his found family alive while questioning the dream that holds them together. The frontier is closing, and the gang’s choices shrink with it.",
+      "spoiler": "The story’s second half is best discovered unspoiled. Character fates and the gang’s final direction are shaped by loyalty, honor, and time.",
+      "gameplay": [
+        {
+          "title": "Combat",
+          "body": "Cover shooting, contextual melee, and Dead Eye slow-motion create deliberate, weighty gunfights."
+        },
+        {
+          "title": "Exploration",
+          "body": "Ride, hunt, fish, and stumble into stranger encounters across a reactive frontier."
+        },
+        {
+          "title": "Missions",
+          "body": "Story jobs mix scripted set pieces with camp life, chores, and quiet character scenes."
+        },
+        {
+          "title": "Movement",
+          "body": "Animation-led locomotion and horse bonding make travel feel physical rather than instant."
+        },
+        {
+          "title": "Progression",
+          "body": "Camp upgrades, weapon maintenance, crafting, and a satchel system reward preparation."
+        },
+        {
+          "title": "Multiplayer",
+          "body": "Red Dead Online offers posse play, frontier roles, and a shared open world."
+        }
+      ],
+      "features": [
+        {
+          "title": "A living simulation",
+          "body": "Wildlife, weather, schedules, and NPC routines persist with or without the player."
+        },
+        {
+          "title": "Honor system",
+          "body": "Actions alter dialogue, prices, and encounters, nudging Arthur’s self-image."
+        },
+        {
+          "title": "Cinematic presentation",
+          "body": "Long takes, dynamic music, and a restrained camera give the story an elegiac tone."
+        },
+        {
+          "title": "Detail as design",
+          "body": "Weapon wear, horse care, and camp upkeep turn mundane tasks into role-play."
+        }
+      ],
+      "engine": "RAGE",
+      "storage": "150 GB",
+      "requirements": {
+        "minimum": {
+          "os": "Windows 10 64-bit",
+          "cpu": "Intel Core i5-2500K / AMD FX-6300",
+          "gpu": "NVIDIA GTX 770 2 GB / AMD R9 280 3 GB",
+          "ram": "8 GB",
+          "storage": "150 GB"
+        },
+        "recommended": {
+          "os": "Windows 10 64-bit",
+          "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
+          "gpu": "NVIDIA GTX 1060 6 GB / AMD RX 480 4 GB",
+          "ram": "12 GB",
+          "storage": "150 GB"
+        }
+      },
+      "cover": "/media/cover/red-dead-redemption-2.webp",
+      "hero": "/media/gallery/red-dead-redemption-2-3.webp",
+      "keyArt": "/media/hero/red-dead-redemption-2.webp",
+      "gallery": [
+        "/media/gallery/red-dead-redemption-2-3.webp",
+        "/media/gallery/red-dead-redemption-2-1.webp",
+        "/media/gallery/red-dead-redemption-2-2.webp",
+        "/media/gallery/red-dead-redemption-2-4.webp"
+      ],
+      "accent": "#c64b38",
+      "aaa": true,
+      "popularity": 100,
+      "similar": [
+        "gta-v",
+        "the-witcher-3",
+        "ghost-of-tsushima"
+      ]
+    }
+  },
   "custom": [],
   "deleted": []
 }
