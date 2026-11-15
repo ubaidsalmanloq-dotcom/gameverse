@@ -309,7 +309,7 @@ export function Hero() {
           </div>
           <Link
             to={game ? `/games/${game.slug}` : '/discover'}
-            className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-white/45 transition hover:text-white"
+            className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-white/45 transition hover:text-white md:ml-0"
           >
             Enter the archive
             <ArrowUpRight className="h-3 w-3" />
