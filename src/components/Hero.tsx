@@ -292,7 +292,7 @@ export function Hero() {
         </div>
 
         <div className="relative flex items-center justify-between border-t border-white/10 py-4 lg:py-5">
-          <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 sm:flex">
             <Play className="h-3 w-3 fill-white/60 text-white/60" />
             <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/30">
               An independent game encyclopedia
@@ -309,7 +309,7 @@ export function Hero() {
           </div>
           <Link
             to={game ? `/games/${game.slug}` : '/discover'}
-            className="inline-flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-white/45 transition hover:text-white"
+            className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-white/45 transition hover:text-white"
           >
             Enter the archive
             <ArrowUpRight className="h-3 w-3" />
