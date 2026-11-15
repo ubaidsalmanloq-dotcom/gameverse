@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { asset } from '@/lib/utils'
 
 interface SEOOptions {
   title: string
@@ -25,8 +26,8 @@ export function useSEO({ title, description, image }: SEOOptions): void {
     setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', title)
     setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description)
     if (image) {
-      setMeta('meta[property="og:image"]', 'property', 'og:image', image)
-      setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', image)
+      setMeta('meta[property="og:image"]', 'property', 'og:image', asset(image))
+      setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', asset(image))
     }
   }, [title, description, image])
 }

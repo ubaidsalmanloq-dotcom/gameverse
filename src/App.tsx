@@ -63,7 +63,7 @@ function RouteFallback() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <div className="grain relative min-h-screen overflow-x-clip">
         <div className="ambient-glow" aria-hidden="true" />
         <a

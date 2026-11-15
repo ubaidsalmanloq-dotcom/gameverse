@@ -6,7 +6,7 @@ import { games } from '@/data/games'
 import { genres } from '@/data/genres'
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll'
 import { EASE } from '@/lib/motion'
-import { cn } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
 import { Logo } from './Logo'
 import { SearchOverlay } from './SearchOverlay'
 
@@ -175,7 +175,7 @@ export function Navbar() {
           >
             <div className="absolute inset-0 -z-10 overflow-hidden">
               <img
-                src="/media/gallery/elden-ring-3.webp"
+                src={asset('/media/gallery/elden-ring-3.webp')}
                 alt=""
                 className="h-full w-full object-cover opacity-[0.14]"
                 aria-hidden="true"

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { LogoMark } from '@/components/Logo'
 import { games } from '@/data/games'
 import { useSEO } from '@/hooks/useSEO'
+import { asset } from '@/lib/utils'
 
 export function NotFound() {
   const navigate = useNavigate()
@@ -20,7 +21,7 @@ export function NotFound() {
     <section className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28">
       <div className="absolute inset-0 -z-10">
         <img
-          src="/media/gallery/control-2.webp"
+          src={asset('/media/gallery/control-2.webp')}
           alt=""
           className="h-full w-full object-cover opacity-25"
           aria-hidden="true"

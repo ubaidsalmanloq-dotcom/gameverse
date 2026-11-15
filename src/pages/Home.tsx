@@ -10,6 +10,7 @@ import { SectionHeading } from '@/components/SectionHeading'
 import { SystemsExplorer } from '@/components/SystemsExplorer'
 import { genreById } from '@/data/genres'
 import { platforms } from '@/data/platforms'
+import { asset } from '@/lib/utils'
 import { systems } from '@/data/systems'
 import { useSEO } from '@/hooks/useSEO'
 import type { GenreId } from '@/data/types'
@@ -155,7 +156,7 @@ export function Home() {
                     } ${index === 0 ? 'md:min-h-[520px]' : ''}`}
                   >
                     <img
-                      src={genre.image}
+                      src={asset(genre.image)}
                       alt=""
                       className="absolute inset-0 h-full w-full object-cover opacity-35 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:opacity-45"
                       loading="lazy"

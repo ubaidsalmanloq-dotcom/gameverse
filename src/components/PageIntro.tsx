@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { cn } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
 import { Reveal, WordsReveal } from './Reveal'
 
 interface PageIntroProps {
@@ -42,7 +42,7 @@ export function PageIntro({
       {image ? (
         <div className="absolute inset-0 -z-10">
           <img
-            src={image}
+            src={asset(image)}
             alt={imageAlt}
             className="h-full w-full scale-105 object-cover object-center opacity-40"
             fetchPriority="high"

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, X } from 'lucide-react'
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll'
 import { EASE } from '@/lib/motion'
-import { cn } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
 
 export interface LightboxImage {
   src: string
@@ -173,7 +173,7 @@ export function Lightbox({ images, startIndex, open, onClose, title }: LightboxP
                       : 'border-white/10 opacity-45 hover:opacity-80',
                   )}
                 >
-                  <img src={item.src} alt="" className="h-full w-full object-cover" />
+                  <img src={asset(item.src)} alt="" className="h-full w-full object-cover" />
                 </button>
               ))}
             </div>

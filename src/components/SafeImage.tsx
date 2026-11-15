@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { LogoMark } from './Logo'
-import { cn } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
 
 interface SafeImageProps {
   src: string
@@ -23,7 +23,7 @@ export function SafeImage({ src, alt, className, imgClassName, priority = false,
     <div className={cn('relative overflow-hidden media-fallback', className)}>
       {!failed ? (
         <img
-          src={src}
+          src={asset(src)}
           alt={alt}
           className={cn('h-full w-full object-cover', imgClassName)}
           loading={priority ? 'eager' : 'lazy'}

@@ -4,6 +4,13 @@ export function cn(...values: Array<string | false | null | undefined>): string 
   return values.filter(Boolean).join(' ')
 }
 
+export function asset(path: string): string {
+  if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('data:') || path.startsWith('blob:')) return path
+  const base = import.meta.env.BASE_URL
+  const clean = path.replace(/^\/+/, '')
+  return base.endsWith('/') ? `${base}${clean}` : `${base}/${clean}`
+}
+
 export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max)
 }
