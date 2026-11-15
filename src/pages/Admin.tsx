@@ -197,7 +197,7 @@ function LoginScreen({
             <Link to="/" className="transition hover:text-white/65">
               Back to site
             </Link>
-            <span className="font-mono text-[8px] uppercase tracking-[0.18em]">Admin · Upload access</span>
+            <span className="font-mono text-[8px] uppercase tracking-[0.18em]">Admin · Publish access</span>
           </div>
         </div>
         <p className="mt-5 text-center text-[11px] leading-relaxed text-white/25">
