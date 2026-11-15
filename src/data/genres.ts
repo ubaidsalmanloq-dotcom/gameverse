@@ -1,0 +1,278 @@
+import type { Genre } from './types'
+
+export const genres: Genre[] = [
+  {
+    id: 'action',
+    name: 'Action',
+    shortName: 'Action',
+    tagline: 'Reflex, impact, spectacle.',
+    meaning:
+      'Action games are built around real-time execution: attacking, dodging, aiming, and reacting under pressure. The genre is broad enough to include character-action spectacle, shooters, and melee brawlers, but the common thread is that success is measured in the hands, not in a menu.',
+    gameplay:
+      'Play is continuous and reactive. Encounters are framed as combat arenas, chases, or set pieces, and the player is asked to read enemy tells, manage spacing, and chain abilities. Good action design layers a simple input grammar with escalating threats.',
+    mechanics: ['Combo systems', 'Dodge and parry windows', 'Enemy telegraphs', 'Weapon switching', 'Boss encounters', 'Score and rank systems'],
+    unique: ['Immediate physical feedback', 'Skill expression through timing', 'Encounter choreography', 'Style and spectacle as reward'],
+    examples: ['Devil May Cry 5', 'Bayonetta 3', 'Metal Gear Rising: Revengeance', 'Returnal'],
+    recommended: ['god-of-war-ragnarok', 'spider-man-2', 'ghost-of-tsushima', 'black-myth-wukong'],
+    icon: 'Swords',
+    image: '/media/gallery/god-of-war-ragnarok-4.webp',
+    accent: '#b2775b',
+  },
+  {
+    id: 'adventure',
+    name: 'Adventure',
+    shortName: 'Adventure',
+    tagline: 'A story you can walk through.',
+    meaning:
+      'Adventure games prioritize narrative, discovery, and problem-solving over pure reflex. The category spans cinematic third-person journeys, point-and-click mysteries, and exploration-driven indies. What connects them is a world worth investigating and a story that changes as you move through it.',
+    gameplay:
+      'Moment-to-moment play alternates between traversal, dialogue, puzzle solving, and light combat. Pacing is often deliberate; the player is encouraged to look, listen, and connect information. Choice and environment are frequently more important than execution.',
+    mechanics: ['Dialogue choices', 'Environmental puzzles', 'Item collection', 'Traversal tools', 'Narrative flags', 'Optional side stories'],
+    unique: ['Story-first pacing', 'World as narrative', 'Atmosphere over score', 'Discovery-driven design'],
+    examples: ['Uncharted 4: A Thief’s End', 'The Legend of Zelda: Breath of the Wild', 'Life is Strange', 'Firewatch'],
+    recommended: ['red-dead-redemption-2', 'ghost-of-tsushima', 'it-takes-two', 'horizon-forbidden-west'],
+    icon: 'Compass',
+    image: '/media/gallery/ghost-of-tsushima-3.webp',
+    accent: '#c79b5e',
+  },
+  {
+    id: 'rpg',
+    name: 'Role-Playing Games',
+    shortName: 'RPG',
+    tagline: 'Become someone else.',
+    meaning:
+      'Role-playing games build systems around character growth: stats, classes, equipment, and decisions that define who your character becomes. Modern RPGs blend those systems with action, turn-based tactics, and open-ended exploration, but the core appeal is authorship over a build and a path.',
+    gameplay:
+      'Players invest in a character or party, then navigate challenges using those investments. Combat may be real-time or turn-based; outside combat, dialogue, quests, and factional choices create a second layer of progression. Numbers are meaningful, but so are the stories attached to them.',
+    mechanics: ['Character builds', 'Leveling and skill trees', 'Loot and crafting', 'Dialogue checks', 'Companion relationships', 'Branching quests'],
+    unique: ['Long-term character ownership', 'Consequence across many hours', 'Systems that interact', 'Personalized difficulty through builds'],
+    examples: ['Disco Elysium', 'Final Fantasy VII Remake', 'Chrono Trigger', 'Dragon Age: Origins'],
+    recommended: ['baldurs-gate-3', 'the-witcher-3', 'elden-ring', 'persona-5-royal'],
+    icon: 'Dices',
+    image: '/media/gallery/baldurs-gate-3-1.webp',
+    accent: '#9b7b56',
+  },
+  {
+    id: 'fps',
+    name: 'First-Person Shooter',
+    shortName: 'FPS',
+    tagline: 'The camera is the weapon.',
+    meaning:
+      'First-person shooters place the player behind the eyes of a character, making aim and spatial awareness the primary language. The genre ranges from tactical team play to arcade movement shooters, but all of it depends on the relationship between the camera, the crosshair, and the world.',
+    gameplay:
+      'Movement and aim are the core verbs. Encounters are designed around sightlines, cover, and weapon economy, while campaigns add scripted spectacle and multiplayer adds map knowledge. Modern FPS design often blends abilities, traversal, and resource loops into the shooting.',
+    mechanics: ['Hitscan and projectile weapons', 'Recoil patterns', 'Ammo economy', 'Cover and verticality', 'Movement tech', 'Loadouts'],
+    unique: ['Direct embodiment', 'Precision feedback', 'Map literacy', 'Weapon feel as design'],
+    examples: ['Half-Life 2', 'Halo Infinite', 'Counter-Strike 2', 'Call of Duty: Modern Warfare'],
+    recommended: ['doom-eternal', 'cyberpunk-2077', 'helldivers-2'],
+    icon: 'Crosshair',
+    image: '/media/gallery/doom-eternal-2.webp',
+    accent: '#b55a48',
+  },
+  {
+    id: 'tps',
+    name: 'Third-Person Shooter',
+    shortName: 'TPS',
+    tagline: 'Fight from a wider frame.',
+    meaning:
+      'Third-person shooters pull the camera back, putting the character in view along with the battlefield. That extra distance supports cover play, mobility, and character expression. The genre includes cover shooters, action-horror hybrids, and cooperative horde games.',
+    gameplay:
+      'Aim and movement share attention with positioning. Over-the-shoulder framing makes cover readable and character animation legible, while dodge rolls, climbing, and abilities add motion. Encounter design often depends on flanking and spatial control.',
+    mechanics: ['Over-the-shoulder aiming', 'Cover systems', 'Dodge and roll', 'Ability cooldowns', 'Weapon upgrades', 'Cooperative encounters'],
+    unique: ['Character readability', 'Cover-and-flank rhythm', 'Blended action systems', 'Strong sense of physical space'],
+    examples: ['Gears 5', 'Max Payne 3', 'Returnal', 'Uncharted 4'],
+    recommended: ['resident-evil-4', 'helldivers-2', 'control', 'alan-wake-2'],
+    icon: 'Focus',
+    image: '/media/gallery/helldivers-2-4.webp',
+    accent: '#c0a14d',
+  },
+  {
+    id: 'open-world',
+    name: 'Open World',
+    shortName: 'Open World',
+    tagline: 'The map is an invitation.',
+    meaning:
+      'Open-world games offer a large, continuous space where the player chooses direction and pace. The label describes structure rather than content: a world can be a systemic sandbox, a narrative road trip, or a traversal playground. The best ones make the journey between objectives matter.',
+    gameplay:
+      'Players travel, discover, and choose. Design tools include landmarks, visibility lines, quest density, and traversal mechanics. Great open worlds communicate possibility without turning every icon into a chore; discovery and systemic interaction replace linear pacing.',
+    mechanics: ['Traversal systems', 'Map discovery', 'Dynamic events', 'Fast travel', 'Collectibles', 'Environmental storytelling'],
+    unique: ['Player-authored pacing', 'Scaled landscapes', 'Emergent encounters', 'Freedom to ignore the plot'],
+    examples: ['The Elder Scrolls V: Skyrim', 'The Legend of Zelda: Breath of the Wild', 'Red Dead Redemption 2', 'GTA V'],
+    recommended: ['red-dead-redemption-2', 'elden-ring', 'ghost-of-tsushima', 'forza-horizon-5'],
+    icon: 'Globe2',
+    image: '/media/gallery/red-dead-redemption-2-4.webp',
+    accent: '#b25b47',
+  },
+  {
+    id: 'survival',
+    name: 'Survival',
+    shortName: 'Survival',
+    tagline: 'Everything is a resource.',
+    meaning:
+      'Survival games make scarcity the engine of play. Food, water, warmth, oxygen, and shelter become problems to solve, and the world is usually indifferent to the player. The genre overlaps with horror, crafting, and exploration, but its emotional signature is persistent vulnerability.',
+    gameplay:
+      'Players gather, craft, build, and manage risk. Time pressure and environmental hazards make small decisions matter: whether to explore one more cave, carry one more item, or retreat. Death often resets or sets back progress, giving exploration real weight.',
+    mechanics: ['Resource meters', 'Crafting trees', 'Base building', 'Environmental hazards', 'Day/night cycles', 'Permadeath or loss penalties'],
+    unique: ['Scarcity-driven decisions', 'Knowledge as progression', 'Tension from ordinary needs', 'Player-made goals'],
+    examples: ['The Long Dark', 'Rust', 'Don’t Starve', 'Green Hell'],
+    recommended: ['subnautica', 'resident-evil-4', 'silent-hill-2', 'alan-wake-2'],
+    icon: 'Flame',
+    image: '/media/gallery/subnautica-3.webp',
+    accent: '#2f9e95',
+  },
+  {
+    id: 'horror',
+    name: 'Horror',
+    shortName: 'Horror',
+    tagline: 'Fear is the mechanic.',
+    meaning:
+      'Horror games design for dread, not just danger. Some rely on resource scarcity and helplessness; others on sound, pacing, and the unknown. The genre can be violent or quiet, but it always asks the player to continue into something they would rather avoid.',
+    gameplay:
+      'Tension is paced through light, sound, sightlines, and safe rooms. Combat may be absent, limited, or deliberately clumsy. Good horror controls information: it shows enough to unsettle and withholds enough to keep the imagination working.',
+    mechanics: ['Limited resources', 'Line-of-sight stealth', 'Sound cues', 'Safe rooms', 'Sanity or stress', 'Puzzle locks'],
+    unique: ['Atmosphere over power', 'Sound as threat', 'Vulnerability by design', 'The unknown as content'],
+    examples: ['Amnesia: The Dark Descent', 'Outlast', 'Dead Space', 'Silent Hill 2'],
+    recommended: ['silent-hill-2', 'alan-wake-2', 'resident-evil-4', 'control'],
+    icon: 'Ghost',
+    image: '/media/gallery/silent-hill-2-1.webp',
+    accent: '#7a858e',
+  },
+  {
+    id: 'racing',
+    name: 'Racing',
+    shortName: 'Racing',
+    tagline: 'Lines, speed, and the perfect exit.',
+    meaning:
+      'Racing games turn vehicles and tracks into a skill language. The spectrum runs from simulation-grade handling to arcade spectacle, but the core loop is always the same: learn a course, improve a line, and find time. Cars are both tools and culture.',
+    gameplay:
+      'Players manage throttle, braking, and steering while learning tracks and vehicle behavior. Progression comes through tuning, unlocking, or mastery. Online racing adds the psychology of overtaking and defending under pressure.',
+    mechanics: ['Vehicle handling', 'Tuning', 'Course learning', 'Drafting and overtaking', 'Damage models', 'Time trials'],
+    unique: ['Pure mechanical feedback', 'Track knowledge as skill', 'Speed as sensation', 'Car culture'],
+    examples: ['Gran Turismo 7', 'F1 25', 'Need for Speed Unbound', 'Forza Motorsport'],
+    recommended: ['forza-horizon-5', 'gta-v'],
+    icon: 'Gauge',
+    image: '/media/gallery/forza-horizon-5-4.webp',
+    accent: '#cc6d45',
+  },
+  {
+    id: 'sports',
+    name: 'Sports',
+    shortName: 'Sports',
+    tagline: 'Rules, rivals, repetition.',
+    meaning:
+      'Sports games simulate or interpret real-world athletic competition. Their design problem is interesting: the rules already exist, so the work lies in control feel, AI, presentation, and long-term modes. The best entries make practice feel like progress.',
+    gameplay:
+      'Players control athletes or teams inside a rules-based contest. Skill expression lives in timing, positioning, and decisions, while modes wrap the sport in career arcs, team management, or online competition. Accessibility varies widely by title.',
+    mechanics: ['Team tactics', 'Player ratings', 'Season modes', 'Online leagues', 'Skill moves', 'Match momentum'],
+    unique: ['Existing rule sets', 'Team and player identity', 'Seasonal live content', 'Shared real-world language'],
+    examples: ['NBA 2K', 'MLB The Show', 'Rocket League', 'EA Sports FC'],
+    recommended: ['ea-sports-fc-25', 'tekken-8'],
+    icon: 'Trophy',
+    image: '/media/gallery/ea-sports-fc-25-1.webp',
+    accent: '#3ca57f',
+  },
+  {
+    id: 'strategy',
+    name: 'Strategy',
+    shortName: 'Strategy',
+    tagline: 'Think three moves ahead.',
+    meaning:
+      'Strategy games reward planning over reflex. They can be turn-based board-like systems, real-time battles of attention, or grand campaigns of politics and production. The shared pleasure is watching a plan survive contact with a thinking opponent.',
+    gameplay:
+      'Players gather information, allocate resources, and commit to plans. Fog of war, counters, and action economy create meaningful trade-offs. Victory often comes from preparation and adaptation rather than mechanical execution.',
+    mechanics: ['Turn order or real-time control', 'Resource management', 'Unit counters', 'Fog of war', 'Tech trees', 'Map control'],
+    unique: ['Deliberate decision-making', 'Asymmetric information', 'Long-term planning', 'Systems mastery'],
+    examples: ['XCOM 2', 'Total War: Warhammer III', 'StarCraft II', 'Into the Breach'],
+    recommended: ['civilization-6', 'baldurs-gate-3'],
+    icon: 'Puzzle',
+    image: '/media/gallery/civilization-6-4.webp',
+    accent: '#c5a45c',
+  },
+  {
+    id: 'simulation',
+    name: 'Simulation',
+    shortName: 'Simulation',
+    tagline: 'Systems worth living inside.',
+    meaning:
+      'Simulation games model systems with enough fidelity that ordinary activities become interesting. Flight, cities, farms, lives, and driving all qualify. The genre is less about challenge than about inhabiting a believable process and watching it respond.',
+    gameplay:
+      'Play is often open-ended: set goals, manage systems, and observe outcomes. Fidelity can be technical (flight models) or social (Sim relationships). Failure is usually a lesson rather than a wall.',
+    mechanics: ['Systemic AI', 'Resource simulation', 'Construction tools', 'Schedules and timers', 'Fidelity settings', 'Sandbox modes'],
+    unique: ['Open-ended goals', 'Believable systems', 'Relaxed pacing', 'Deep customization'],
+    examples: ['Microsoft Flight Simulator', 'Cities: Skylines II', 'Euro Truck Simulator 2', 'Stardew Valley'],
+    recommended: ['the-sims-4', 'civilization-6', 'forza-horizon-5'],
+    icon: 'Cpu',
+    image: '/media/gallery/the-sims-4-2.webp',
+    accent: '#4c9fb4',
+  },
+  {
+    id: 'fighting',
+    name: 'Fighting',
+    shortName: 'Fighting',
+    tagline: 'Two players. No excuses.',
+    meaning:
+      'Fighting games compress combat into short, readable rounds between two characters. Frame data, spacing, and match-up knowledge sit under a surface of spectacle. The genre is one of the purest expressions of competitive mastery in games.',
+    gameplay:
+      'Players learn move sets, neutral game, and defensive options. Execution matters, but so does adaptation: reading habits, conditioning opponents, and managing risk. Training modes and replay tools are as important as the roster.',
+    mechanics: ['Frame data', 'Combos', 'Block and parry', 'Neutral spacing', 'Match-ups', 'Ranked ladders'],
+    unique: ['One-on-one clarity', 'Mechanical mastery', 'Mind games', 'Character expression'],
+    examples: ['Street Fighter 6', 'Mortal Kombat 1', 'Super Smash Bros. Ultimate', 'Tekken 8'],
+    recommended: ['tekken-8', 'god-of-war-ragnarok', 'hades'],
+    icon: 'Zap',
+    image: '/media/gallery/tekken-8-2.webp',
+    accent: '#5b7fd1',
+  },
+  {
+    id: 'stealth',
+    name: 'Stealth',
+    shortName: 'Stealth',
+    tagline: 'The best fight is the one avoided.',
+    meaning:
+      'Stealth games turn detection into a resource. Sightlines, sound, shadows, and patrols define the puzzle, and the player is rewarded for patience and observation. Some games make stealth optional; the best make it feel like authorship.',
+    gameplay:
+      'Players study enemy routines, manipulate vision and noise, and choose routes. Detection can mean failure, escalation, or a new improvisation. Tools expand possibility: distractions, disguises, silenced take-downs, and environmental traps.',
+    mechanics: ['Vision cones', 'Noise propagation', 'Patrol routes', 'Disguises', 'Distractions', 'Non-lethal options'],
+    unique: ['Information as power', 'Player-authored routes', 'Tension of near-discovery', 'Rewarding restraint'],
+    examples: ['Dishonored 2', 'Hitman World of Assassination', 'Metal Gear Solid V', 'Splinter Cell: Chaos Theory'],
+    recommended: ['sekiro', 'ghost-of-tsushima'],
+    icon: 'EyeOff',
+    image: '/media/gallery/sekiro-3.webp',
+    accent: '#b15c4e',
+  },
+  {
+    id: 'soulslike',
+    name: 'Soulslike',
+    shortName: 'Soulslike',
+    tagline: 'Failure, then fluency.',
+    meaning:
+      'Soulslike games are defined by deliberate combat, checkpoint-based progress, recoverable death penalties, and worlds that refuse to explain themselves. The label is often applied broadly, but the emotional core is consistent: respect the danger, learn the pattern, and earn the way forward.',
+    gameplay:
+      'Stamina, commitment, and enemy knowledge shape every fight. Bonfires or checkpoints reset threats and respawn resources. Builds and upgrades soften the challenge, but the primary progression is player understanding. Online systems often let strangers help or invade.',
+    mechanics: ['Checkpoint respawns', 'Soul/currency recovery', 'Stamina combat', 'Boss patterns', 'Invocations', 'Opaque quests'],
+    unique: ['Risk and recovery', 'Environmental storytelling', 'Combat commitment', 'Discovery through community'],
+    examples: ['Dark Souls III', 'Bloodborne', 'Nioh 2', 'Lies of P'],
+    recommended: ['elden-ring', 'sekiro', 'black-myth-wukong'],
+    icon: 'Skull',
+    image: '/media/gallery/elden-ring-3.webp',
+    accent: '#b9a47a',
+  },
+  {
+    id: 'multiplayer',
+    name: 'Multiplayer',
+    shortName: 'Multiplayer',
+    tagline: 'Other people change everything.',
+    meaning:
+      'Multiplayer games are designed around other humans, whether they cooperate, compete, or do both. Design priorities shift toward readability, social systems, matchmaking, and session length. The best multiplayer games generate stories no script could predict.',
+    gameplay:
+      'Players enter shared spaces with roles, goals, and social norms. Team composition, communication, and meta-knowledge matter. Progression often wraps around cosmetics, ranks, or seasonal content rather than a single campaign.',
+    mechanics: ['Matchmaking', 'Team roles', 'Voice and ping systems', 'Ranked progression', 'Seasons and events', 'Social hubs'],
+    unique: ['Human unpredictability', 'Emergent narrative', 'Community meta', 'Cooperation under pressure'],
+    examples: ['Apex Legends', 'Fortnite', 'Minecraft', 'Rocket League'],
+    recommended: ['helldivers-2', 'it-takes-two', 'baldurs-gate-3', 'tekken-8'],
+    icon: 'Users',
+    image: '/media/gallery/helldivers-2-1.webp',
+    accent: '#b6a03d',
+  },
+]
+
+export const genreById = Object.fromEntries(genres.map((genre) => [genre.id, genre]))
